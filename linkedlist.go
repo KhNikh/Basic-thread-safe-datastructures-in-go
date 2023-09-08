@@ -34,7 +34,7 @@ func (ll *linkedlist) printList() {
 }
 
 func (ll *linkedlist) insertNode(data int, idx int) {
-	if idx > (ll.lengthOfLL() + 1) {
+	if idx < 0 || idx > (ll.lengthOfLL()+1) {
 		fmt.Println("Index does not exist")
 	} else {
 		it := ll.head
@@ -60,7 +60,7 @@ func (ll *linkedlist) insertNode(data int, idx int) {
 
 func (ll *linkedlist) deleteNode(idx int) {
 
-	if ll.lengthOfLL() < idx {
+	if idx < 0 || ll.lengthOfLL() < idx {
 		fmt.Println("Index does not exist")
 	} else {
 		it := ll.head

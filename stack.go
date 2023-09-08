@@ -54,6 +54,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Error:", err)
 	} else {
-		println("The top element is ", top)
+		fmt.Println("The top element is ", top)
 	}
 }
